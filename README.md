@@ -3,12 +3,11 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
 # To run this project, you need to do : 
-`
-    $ cd Invoice
-    $ npm install
-    $ npm run build
-    $ npm run start
-`
+   `$ cd Invoice`
+   `$ npm install`
+   `$ npm run build`
+   `$ npm run start`
+
 
 ## Development server
 
