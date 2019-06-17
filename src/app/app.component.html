@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <span>INVOICING APPLICATION</span>
+  <span class="example-fill-remaining-space"></span>
+
+  <span>
+      <button mat-raised-button  [routerLink]="['/products']" color="primary" style="margin-right: 0.1cm">
+        Products
+      </button>
+
+
+   </span>
+   <span>
+      <button mat-raised-button  [routerLink]="['/cart']" color="accent">
+        <mat-icon>add_shopping_cart</mat-icon>
+        Cart
+      </button>
+
+   </span>
+</mat-toolbar>
+
+<br>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

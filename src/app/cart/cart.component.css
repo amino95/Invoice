@@ -1,0 +1,53 @@
+table {
+    width: 100%;
+    background-color: #424242;
+    color: whitesmoke;
+    font-style: normal;
+    font-size: 14px;
+    display: table;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+  }
+tr:hover {
+    background-color: #f5f5f5;
+    color: gray;
+}
+
+th, td {
+    border-left: 0ch;
+    border-right: 0ch;
+    border-bottom: 1px solid #ddd;
+  }
+
+td {
+    padding: 0.5cm;
+}
+
+th{
+    padding: 0.2cm;
+}
+
+div#crypto-container {
+    background: white;
+    width: 70%;
+    margin: 0 auto 4px auto;
+    padding: 1em;
+    box-shadow: 1px 1px 0 lightgray;
+}
+
+span.left {
+    font-weight: bold;
+}
+
+span.right{
+    float: right;
+}
+
+.date{
+    margin-top: 2cm;
+    float: right;
+    background-color: #ddd;
+    width: 100%;
+}

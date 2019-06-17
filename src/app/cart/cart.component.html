@@ -1,0 +1,45 @@
+<h3>Cart Info</h3>
+
+<table>
+    <tr>
+        <th>Option</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Sub Total</th>
+    </tr>
+    <tr *ngFor="let item of items">
+        <td align="center">
+            <button (click)="remove(item.product.id)" mat-raised-button color="warn">Remove</button>
+        </td>
+        <td>{{item.product.id}}</td>
+        <td>{{item.product.name}}</td>
+        <td>{{item.product.description}}</td>
+        <td>{{item.product.price | currency: 'EUR'}}</td>
+        <td>{{item.quantity}}</td>
+        <td>{{item.product.price * item.quantity | currency: 'EUR'}}</td>
+    </tr>
+    <tr>
+        <td colspan="6" align="right">Total</td>
+        <td>{{total | currency: 'EUR'}}</td>
+    </tr>
+</table>
+<div class="date">Today is :
+  {{ date | date: 'fullDate'}}
+</div>
+<!--
+<div *ngIf="cryptos">
+  <div id="crypto-container" *ngFor="let crypto of objectKeys(cryptos)">
+    <span class="left">
+      {{crypto}}
+    </span>
+    <span class="right">{{ cryptos[crypto].EUR | currency: 'EUR': true }} </span> 
+  </div>
+</div>
+-->
+
+<div *ngIf="cryptos">
+  <span>{{cryptos[crypto] }} </span>
+</div>

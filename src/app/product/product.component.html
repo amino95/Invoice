@@ -1,0 +1,40 @@
+  <h3>Items For Sale</h3>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+    
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef > Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef > Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef > Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.price | currency: 'EUR'}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Description </th>
+        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="availableNumber">
+          <th mat-header-cell *matHeaderCellDef> Available Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.availableNumber}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="buy">
+            <th mat-header-cell *matHeaderCellDef> Buy </th>
+            <td mat-cell *matCellDef="let element" color="primary">
+                <button [routerLink]="['/cart', { id:element.id }]" mat-raised-button color="accent">Add to Cart</button>  
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    
