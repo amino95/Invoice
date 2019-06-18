@@ -84,16 +84,20 @@ export class CartComponent implements OnInit {
 		this.total = 0;
 		this.items = [];
 		let cart = JSON.parse(localStorage.getItem('cart'));
-		for (var i = 0; i < cart.length; i++) {
-			let item = JSON.parse(cart[i]);
-			this.items.push({
-				product: item.product,
-				quantity: item.quantity
-      });
-      this.total += item.product.price * item.quantity;
+		if(cart === null){
+			this.items = [];
+		}
+		else {
+			for (var i = 0; i < cart.length ; i++) {
+				let item = JSON.parse(cart[i]);
+				this.items.push({
+					product: item.product,
+					quantity: item.quantity
+		  });
+		  this.total += item.product.price * item.quantity;
+			}
 		}
   }
-  
   
 	remove(id: string): void {
 		let cart: any = JSON.parse(localStorage.getItem('cart'));
